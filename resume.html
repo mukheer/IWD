@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume</title>
+
+  <style>
+    /* Styles for resume layout */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: rgb(134, 100, 100);
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-container {
+      background-color: #333;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    .nav-links {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .nav-links li {
+      margin: 0 10px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 8px;
+      border: 10px solid black;
+      padding: 40px;
+    }
+
+    .section {
+      margin-bottom: 30px;
+      opacity: 0;
+      transition: opacity 0.6s ease-in-out;
+    }
+
+    .section h2 {
+      margin-bottom: 15px;
+      font-size: 1.5em;
+      color: #333;
+    }
+
+    .line {
+      border-top: 1px solid #ccc;
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    
+    .reveal {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="nav-container">
+    <ul class="nav-links">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Resume.html">Resume</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <img src="C:\Users\mukheer\Desktop\WhatsApp Image 2024-01-06 at 01.41.19_4540eeb3.jpg" alt="Profile Image">
+    
+    <p style="text-align: center;">Mahamad mukheer </p>
+    
+    <p style="text-align: center;">Aspiring IT Professional</p>
+    <div class="line"></div>
+
+    <div id="summary" class="section">
+      <h2><i class="ri-edit-fill"></i>Summary</h2>
+      <p>Enthusiastic and motivated first-year Computer Science student with a passion for CS. Eager to apply emerging skills gained through coursework and projects to contribute to the field. Seeking opportunities to learn and grow within a dynamic and collaborative environment.</p>
+    </div>
+    <hr>
+
+    <div id="education" class="section">
+      <h2><i class="ri-book-open-line"></i>Education</h2>
+      <p>BTECH in Computer Science - RV University, Bengaluru (Expected Graduation: May 2027)</p>
+      <p>Kumarans Pu college, Bengaluru - Graduated: May 2023 (Percentage: 80%)</p>
+      <p>Greenwood High International School, Bengaluru - Graduated: May 2021 (CGPA: 10)</p>
+    </div>
+    <hr>
+
+    <div id="languages" class="section">
+      <h2><i class="ri-message-2-fill"></i>Languages</h2>
+      <p>English,Hindi,Kannada,Arabic</p>
+    </div>
+    <hr>
+
+    <div id="skills" class="section">
+      <h2><i class="ri-brain-line"></i>Skills</h2>
+      <p>Programming Languages: C, Python</p>
+      <p>Web Technologies: HTML, CSS</p>
+      <!-- Add more skills -->
+    </div>
+    <hr>
+
+    <div id="achievements" class="section">
+      <h2><i class="ri-medal-line"></i>Achievements</h2>
+      <p>Secured first prize in national Taekwondo championship</p>
+      <p>Won Interschool painting competition</p>
+      <p>Won Interschool drawing competition</p>
+      <!-- Add more achievements -->
+    </div>
+    <hr>
+
+
+    <div id="hobbies" class="section">
+      <h2><i class="ri-chat-smile-3-line"></i>Hobbies</h2>
+      <p>Dancing, Modelling, Fitness enthusiast, Travelling</p>
+      <!-- Add more hobbies -->
+    </div>
+    <hr>
+  
+    <script>
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+
+      function revealSections() {
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(section => {
+          if (isInViewport(section)) {
+            section.classList.add('reveal');
+          }
+        });
+      }
+
+      window.addEventListener('scroll', revealSections);
+    </script>
+  </div>
+</body>
+</html>
